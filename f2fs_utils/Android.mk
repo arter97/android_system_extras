@@ -6,7 +6,7 @@ ifeq ($(HOST_OS),linux)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libf2fs_utils_host
-LOCAL_SRC_FILES := f2fs_utils.c
+LOCAL_SRC_FILES := f2fs_utils.c f2fs_ioutils.c
 LOCAL_STATIC_LIBRARIES := \
     libsparse_host \
     libz
@@ -61,7 +61,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libf2fs_utils_static
-LOCAL_SRC_FILES := f2fs_utils.c
+LOCAL_SRC_FILES := f2fs_utils.c f2fs_ioutils.c
 LOCAL_C_INCLUDES := external/f2fs-tools/include external/f2fs-tools/mkfs
 LOCAL_STATIC_LIBRARIES := \
     libsparse_static

@@ -40,7 +40,7 @@ struct selabel_handle;
 
 #include "make_f2fs.h"
 
-extern void flush_sparse_buffs();
+void flush_sparse_buffs();
 
 struct f2fs_configuration config;
 struct sparse_file *f2fs_sparse_file;
